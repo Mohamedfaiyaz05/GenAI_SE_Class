@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Rihana",
+        "status": "Sent",
+        "last_3_messages": [
+            {
+                "meta": "1:05 AM, 10/1/2026] Rihana🤗🥰♾️",
+                "text": "Roger"
+            },
+            {
+                "meta": "9:13 AM, 10/1/2026] Rihana🤗🥰♾️",
+                "text": "Thanks for ur confirmation"
+            },
+            {
+                "meta": "9:16 AM, 10/1/2026] Rihana🤗🥰♾️",
+                "text": "Any doc needed for verification and cross verification"
+            }
+        ]
+    },
+    {
+        "name": "Amma",
+        "status": "Sent",
+        "last_3_messages": [
+            {
+                "meta": "1:05 AM, 10/1/2026] Amma💜",
+                "text": "Hello  pa"
+            },
+            {
+                "meta": "1:06 AM, 10/1/2026] Amma💜",
+                "text": "Great ... And all the best"
+            },
+            {
+                "meta": "1:06 AM, 10/1/2026] Amma💜",
+                "text": "Will soon be high on AI then"
+            }
+        ]
+    },
+    {
+        "name": "Faiyaz",
+        "status": "Sent",
+        "last_3_messages": [
+            {
+                "meta": "10:27 AM, 10/1/2026] Faiyaz😆",
+                "text": "Hey Faiyaz, thanks for reaching out! Have a great day"
+            },
+            {
+                "meta": "10:34 AM, 10/1/2026] Faiyaz😆",
+                "text": "Hey Faiyaz, thanks for reaching out! Have a great day"
+            },
+            {
+                "meta": "10:50 AM, 10/1/2026] Faiyaz😆",
+                "text": "Hey Faiyaz, thanks for reaching out! Have a great day"
+            }
+        ]
+    }
+]
