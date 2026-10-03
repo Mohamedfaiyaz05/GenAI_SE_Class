@@ -1,0 +1,20 @@
+# WhatsApp Session & Chromium User Data (Contains sensitive auth tokens/cookies)
+user_data/
+whatsapp_session/
+
+# Python Virtual Environments
+myenv/
+venv/
+.venv/
+env/
+
+# Excel & Data Files (Input/Output Reports)
+restricted_data.xlsx
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables & Secrets
+.env
