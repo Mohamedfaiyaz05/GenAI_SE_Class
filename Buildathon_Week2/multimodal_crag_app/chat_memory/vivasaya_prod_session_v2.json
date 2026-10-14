@@ -1,0 +1,18 @@
+[
+  {
+    "role": "user",
+    "content": "What government schemes can I apply for?"
+  },
+  {
+    "role": "assistant",
+    "content": "Based on the provided context, you can apply for the following government schemes:\n\n1. **Annal Ambedkar Agricultural Assistance Scheme**: This scheme is aimed at facilitating Scheduled Caste and Scheduled Tribe farmers to access government benefits, create irrigation infrastructure, and improve livelihoods. It offers an additional subsidy of 20% to reduce the financial burden on small and marginal farmers.\n\n2. **Integrated Agricultural Machinery Hiring Business Centre**: This scheme addresses challenges such as labor shortages and low prices for agricultural produce by establishing Integrated Agricultural Machinery Hiring Business Centres. It provides a 75% subsidy for Scheduled Caste, Scheduled Tribe, women entrepreneurs, and youth with agricultural engineering qualifications, and a 50% subsidy for other entrepreneurs.\n\n3. **Agricultural Mechanization Scheme**: This scheme promotes mechanization at the village level by providing agricultural machinery and equipment with subsidies. It benefits 24,000 farmers and includes increased subsidies for solar drier installations.\n\n4. **Establishment of Agricultural Machinery Custom Hiring Centres**: This initiative facilitates access to agricultural machinery and modern equipment on a rental basis, with an 80% subsidy for establishing these centres.\n\n5. **Agroforestry Scheme**: This scheme focuses on increasing the number of nurseries and enhancing the production of quality seedlings, with a financial allocation for producing and distributing seedlings to farmers.\n\nYou may want to check the specific eligibility criteria and application processes for each scheme to determine your suitability."
+  },
+  {
+    "role": "user",
+    "content": "yes "
+  },
+  {
+    "role": "assistant",
+    "content": "The information is unavailable."
+  }
+]

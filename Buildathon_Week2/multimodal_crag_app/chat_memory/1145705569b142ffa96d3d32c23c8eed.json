@@ -1,0 +1,34 @@
+[
+  {
+    "role": "user",
+    "content": "what are the question you can help me out"
+  },
+  {
+    "role": "assistant",
+    "content": "I can help you with a variety of questions related to agricultural policy, including topics such as crop management, sustainable farming practices, government regulations, agricultural economics, and more. If you have a specific area of interest or a particular question in mind, please let me know!"
+  },
+  {
+    "role": "user",
+    "content": "“2026–27 வேளாண் பட்ஜெட்டில் விவசாயிகளுக்கான முக்கிய திட்டங்கள் என்ன? ஆதாரப் பக்க எண்களுடன் தமிழில் விளக்குங்கள்.”"
+  },
+  {
+    "role": "assistant",
+    "content": "2026–27 வேளாண் பட்ஜெட்டில் விவசாயிகளுக்கான முக்கிய திட்டங்கள் கீழ்வருமாறு உள்ளன:\n\n1. **மக்கல் சேவகர் அஞ்சலாய் அம்மல் விருது**: சிறு மற்றும் மிதமான விவசாயிகளை ஊக்குவிக்க, மாநில அளவிலான பயிர் விளைச்சல் போட்டிகள் நடத்தப்படும். 10 பயிர்களுக்கு, ஒவ்வொரு வகை பயிருக்கும் மூன்று சிறந்த விவசாயிகள் ரூ.2.50 லட்சம், ரூ.1.50 லட்சம் மற்றும் ரூ.1 லட்சம் பரிசுகளை பெறுவர். இதற்காக ரூ.50 லட்சம் மாநில நிதியில் ஒதுக்கப்படும் [budget_doc.pdf, p. 30].\n\n2. **மாவட்ட அளவிலான \"வெற்றி விவசாயி\" விருது**: குறைந்தது இரண்டு ஏக்கர் நிலத்தில் விவசாயம் செய்து, அதிக விளைச்சலை அடைந்த விவசாயிகளுக்கு வழங்கப்படும். ஒவ்வொரு பயிர் வகையிலும் இரண்டு சிறந்த விவசாயிகள் ரூ.50,000 மற்றும் ரூ.25,000 பரிசுகளை பெறுவர் [budget_doc.pdf, p. 30].\n\n3. **தமிழ்நாடு மில்லெட் மிஷன்**: இந்த திட்டம் ரூ.63.81 கோடி நிதியுடன் 2026-27ல் செயல்படுத்தப்படும். இதில் மில்லெட் பயிர்களின் வளர்ச்சிக்கு பல்வேறு நடவடிக்கைகள் உள்ளன, அதில் மாற்று பயிர் திட்டம், ராகி பயிர் வளர்ச்சிக்கு உதவி, மற்றும் விவசாயிகளுக்கான பயிற்சிகள் அடங்கும் [agri_schemes_2026_27.pdf, p. 29].\n\n4. **உழவர் செயற்கை நுண்ணறிவு (AI) திட்டம்**: விவசாயிகள் தங்கள் மொபைல் போன்களில் விவசாய தகவல்களை எளிதாக அணுகுவதற்காக ரூ.2 கோடி மாநில நிதியில் ஒதுக்கப்படும் [budget_doc.pdf, p. 20].\n\nஇந்த திட்டங்கள் விவசாயிகளின் உற்பத்தி மற்றும் வருமானத்தை மேம்படுத்துவதற்கான முக்கியமான முயற்சிகள் ஆகும்."
+  },
+  {
+    "role": "user",
+    "content": "“According to the 2026–27 budget, how much was allocated to the Kuruvai Package, and how many acres had taken up Kuruvai cultivation so far? Please cite the page.”"
+  },
+  {
+    "role": "assistant",
+    "content": "According to the 2026–27 budget, the Kuruvai Package was allocated Rs.134.83 crore, and Kuruvai cultivation has been undertaken in an area of 8.26 lakh acres so far [budget_doc.pdf, p. 8]."
+  },
+  {
+    "role": "user",
+    "content": "For 2026–27, which seasons and notified crops are covered by PMFBY, and what funding and coverage for acres and farmers does the budget report?”"
+  },
+  {
+    "role": "assistant",
+    "content": "For the 2026–27 fiscal year, the Pradhan Mantri Fasal Bima Yojana (PMFBY) will cover all notified crops during the Kuruvai, Samba, and Rabi seasons. The budget allocates Rs.648.55 crore for this scheme, which aims to provide insurance coverage against various risks such as prevented sowing, failed sowing, yield loss in standing crops, mid-season adversities, post-harvest losses, and localized calamities. The scheme is designed to ensure universal access to crop insurance for all interested farmers cultivating notified crops across the state [agri_schemes_2026_27.pdf, p. 77]."
+  }
+]

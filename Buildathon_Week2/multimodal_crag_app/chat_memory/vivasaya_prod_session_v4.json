@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "do my document have images"
+  },
+  {
+    "role": "assistant",
+    "content": "The provided context does not contain information about whether your document includes images. Therefore, I cannot confirm if your document has images."
+  }
+]

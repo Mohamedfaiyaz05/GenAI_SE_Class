@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "what you can help me with"
+  },
+  {
+    "role": "assistant",
+    "content": "I can assist you with questions related to agricultural policy, including information on regulations, programs, and practices in specific jurisdictions. If you have a particular topic or area of interest in mind, please let me know!"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "தமிழ்நாடு மண் வள இயக்கத்தின் (Tamil Nadu Soil Fertility Mission) கீழ் பசுந்தாள் உரப் பயிர் மற்றும் பலதானிய விதைகளுக்கு என்ன ஆதரவு வழங்கப்படுகிறது? இயற்கை வேளாண்மைக்கான ஏக்கர் ஊக்கத்தொகை மற்றும் மொத்த நிதி ஒதுக்கீட்டையும் கூறுங்கள்"
+  },
+  {
+    "role": "assistant",
+    "content": "தமிழ்நாடு மண் வள இயக்கத்தின் (Tamil Nadu Soil Fertility Mission) கீழ் பசுந்தாள் உரப் பயிர் மற்றும் பலதானிய விதைகளுக்கு 1.5 லட்சம் ஏக்கர் நிலத்தில் பயிரிடும் விவசாயிகளுக்கு 50% உற்பத்தி செலவுக்கு ஆதரவு வழங்கப்படுகிறது. இயற்கை வேளாண்மைக்கான ஊக்கத்தொகை 10,000 ரூபாயாக உள்ளது. மொத்த நிதி ஒதுக்கீடு 10.00 கோடி ரூபாயாக உள்ளது [budget_doc.pdf, p. 22]."
+  },
+  {
+    "role": "user",
+    "content": "kuruvai package"
+  },
+  {
+    "role": "assistant",
+    "content": "The Kuruvai package scheme announced by the Government of Tamil Nadu has an outlay of Rs. 134.83 crore and has benefitted 4.03 lakh farmers so far. This initiative was implemented due to inadequate storage in the Mettur Dam, which could not be opened for irrigation on the scheduled date of 12th June. The scheme aims to support both delta and non-delta districts, and as a result, Kuruvai cultivation has been undertaken in an area of 8.26 lakh acres [budget_doc.pdf, p. 8]."
+  },
+  {
+    "role": "user",
+    "content": "What are the key initiatives in the agriculture budget?"
+  },
+  {
+    "role": "assistant",
+    "content": "The key initiatives in the agriculture budget of Tamil Nadu for the year 2026-27 include:\n\n1. **Farmers' Welfare**: Prioritization of schemes related to farmers' welfare, income enhancement, and safeguarding produce.\n2. **Water Resource Management**: Augmentation and conservation of water resources.\n3. **Organic Farming**: Promotion of organic farming practices and agribusiness.\n4. **Infrastructure Development**: Construction, renovation, and development works for various agricultural departments.\n5. **Crop Productivity**: Initiatives aimed at increasing crop productivity and soil health management.\n6. **Support for Horticultural Crops**: Emphasis on expanding the area under horticultural crops like vegetables, fruits, and flowers.\n7. **Soil Health Campaigns**: Conducting 4,000 Soil Health Awareness Campaigns with an allocation of Rs. 2 crore.\n8. **Vermicompost Units**: Establishment of Permanent Vermicompost Units with an outlay of Rs. 10 crore to ensure quality vermicompost availability.\n9. **Distribution of Bio-Fertilisers**: Distribution of liquid bio-fertilisers and crop boosters to reduce chemical fertiliser use [budget_doc.pdf, p. 6; agri_schemes_2026_27.pdf, p. 25]."
+  }
+]

@@ -1,0 +1,37 @@
+# --- UI & Core App Frameworks ---
+streamlit>=1.40.0
+fastapi>=0.115.0
+uvicorn>=0.30.6
+
+# --- OpenAI & LangChain ---
+openai>=1.109.1
+langchain>=1.0.0
+langchain-core>=1.0.0
+langchain-community>=0.4.0
+langchain-openai>=1.0.0
+langchain-text-splitters>=1.0.0
+langgraph>=1.0.0
+duckduckgo-search==6.3.0
+
+# --- Web Scraping & Automation ---
+playwright>=1.40.0
+
+# --- Vector Storage & Retrieval ---
+faiss-cpu>=1.14.3
+
+# --- PDF Extraction & Multimodal Utilities ---
+pypdf>=5.0.0
+pymupdf>=1.27.0
+Pillow>=11.1.0
+pytesseract>=0.3.10
+
+# --- Data Validation & Configuration ---
+pydantic>=2.10.0
+python-dotenv>=1.0.1
+
+# --- HTTP & API Requests ---
+httpx>=0.27.0
+requests>=2.32.3
+
+# --- Testing ---
+pytest>=8.3.1
