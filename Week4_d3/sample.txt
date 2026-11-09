@@ -1,0 +1,5 @@
+Python is a programming language.
+
+It supports object-oriented programming.
+It is widely used in data engineering,
+automation and artificial intelligence.

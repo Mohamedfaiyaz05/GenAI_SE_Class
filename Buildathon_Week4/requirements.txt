@@ -1,0 +1,46 @@
+
+# ==========================================
+# ShopEase Support AI
+# Python 3.13.15
+# ==========================================
+
+# 1. AutoGen - Multi-Agent Framework
+autogen-agentchat>=0.7,<1.0
+autogen-core>=0.7,<1.0
+autogen-ext[openai,chromadb]>=0.7,<1.0
+
+# 2. LLM and Environment
+openai>=1.0,<3.0
+python-dotenv>=1.0
+pydantic>=2.0,<3.0
+
+# 3. Streamlit UI and Dashboard
+fastapi
+streamlit>=1.40
+pandas>=2.2
+altair>=5.0,<7.0
+plotly>=6.0
+
+# 4. Hybrid RAG - FAISS + BM25 + RRF
+faiss-cpu>=1.13.2
+rank-bm25>=0.2.2
+langchain-text-splitters>=0.3
+
+# 5. AutoGen Long-Term Memory
+chromadb>=1.0
+
+# 6. Guardrails - Input and Output Validation
+guardrails-ai
+
+# 7. DeepEval - Soft Evaluation
+deepeval>=3.0
+
+# 8. Semantic Cache
+cachetools>=5.5,<7.0
+
+# 9. Retry and Reliability
+tenacity>=9.0
+
+# 10. Testing
+pytest>=8.0
+pytest-asyncio>=0.24

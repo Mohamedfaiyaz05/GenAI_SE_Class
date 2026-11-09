@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1900" viewBox="0 0 1600 1900" role="img" aria-labelledby="title description">
+  <title id="title">ShopEase Support AI GraphFlow execution</title>
+  <desc id="description">A GraphFlow-specific execution diagram. Query and input checks lead to knowledge retrieval, resolution, final guardrails and bounded retries. The log agent and trusted Python save tickets and route escalations to human review.</desc>
+  <defs>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39227e"/>
+      <stop offset=".62" stop-color="#6844db"/>
+      <stop offset="1" stop-color="#159caa"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#25234f" flood-opacity=".10"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1L11 6L1 11Z" fill="#7664bd"/>
+    </marker>
+    <marker id="tealArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1L11 6L1 11Z" fill="#159caa"/>
+    </marker>
+    <marker id="orangeArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1L11 6L1 11Z" fill="#d87543"/>
+    </marker>
+    <style>
+      .ink{fill:#20233f;font-family:Inter,"Segoe UI",Arial,sans-serif}
+      .muted{fill:#626985;font-family:Inter,"Segoe UI",Arial,sans-serif}
+      .white{fill:#fff;font-family:Inter,"Segoe UI",Arial,sans-serif}
+      .eyebrow{font-size:15px;font-weight:800;letter-spacing:2.2px}
+      .title{font-size:42px;font-weight:800;letter-spacing:-1.2px}
+      .subtitle{font-size:18px;font-weight:450}
+      .cardtitle{font-size:21px;font-weight:750}
+      .body{font-size:16px;font-weight:450}
+      .small{font-size:14px;font-weight:500}
+      .tiny{font-size:12px;font-weight:800;letter-spacing:.7px}
+      .num{font-size:16px;font-weight:850}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1900" fill="#f2f1ff"/>
+  <rect width="1600" height="164" fill="url(#header)"/>
+  <text x="64" y="52" class="white eyebrow" opacity=".82">SHOP EASE SUPPORT AI · GRAPHFLOW MODE</text>
+  <text x="64" y="108" class="white title">How one GraphFlow request runs</text>
+  <text x="64" y="140" class="white subtitle" opacity=".92">GraphFlow schedules the stages; trusted Python checks access, controls retries, and persists the outcome.</text>
+  <rect x="1324" y="42" width="214" height="40" rx="20" fill="#fff" opacity=".16"/>
+  <text x="1431" y="67" text-anchor="middle" class="white tiny">ONE REQUEST · FRESH FLOW</text>
+
+  <text x="64" y="211" class="muted eyebrow">THE GRAPH · TOP TO BOTTOM</text>
+  <text x="64" y="238" class="muted small">Arrows show execution choices. The dotted feedback path is a limited answer retry, not a new retrieval.</text>
+
+  <!-- Primary flow connector spine -->
+  <path d="M800 330V350M800 445V465M800 560V585M800 675V705M800 795V820M800 988V1015M800 1110V1135M800 1235V1260M800 1350V1380M800 1485V1510M800 1600V1630M800 1725V1750"
+        fill="none" stroke="#7664bd" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Entry and scoped context -->
+  <g filter="url(#shadow)">
+    <rect x="500" y="260" width="600" height="70" rx="18" fill="#eee9ff" stroke="#6844db" stroke-width="2"/>
+    <text x="800" y="290" text-anchor="middle" class="ink cardtitle">Support API receives the customer request</text>
+    <text x="800" y="314" text-anchor="middle" class="muted small">Customer identity comes from the authenticated server session</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="500" y="350" width="600" height="95" rx="18" fill="#fff" stroke="#6844db" stroke-width="2"/>
+    <circle cx="535" cy="383" r="18" fill="#eee9ff"/><text x="535" y="389" text-anchor="middle" class="ink num">0</text>
+    <text x="567" y="386" class="ink cardtitle">Create request-scoped GraphFlow</text>
+    <text x="530" y="417" class="muted small">Fresh state and agent flow per request; no customer state or agent history is shared.</text>
+    <text x="530" y="436" class="muted small">Turn limit leaves room for the task, up to 3 answer attempts, and logging.</text>
+  </g>
+
+  <!-- Analysis and first guard -->
+  <g filter="url(#shadow)">
+    <rect x="500" y="465" width="600" height="95" rx="18" fill="#fff" stroke="#6844db" stroke-width="2"/>
+    <circle cx="535" cy="498" r="18" fill="#eee9ff"/><text x="535" y="504" text-anchor="middle" class="ink num">1</text>
+    <text x="567" y="501" class="ink cardtitle">graph_query · QueryAgent</text>
+    <text x="530" y="532" class="muted body">Returns structured category, urgency, sentiment, summary, and explicit order ID.</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="500" y="585" width="600" height="90" rx="18" fill="#fff8e6" stroke="#d69b24" stroke-width="2"/>
+    <circle cx="535" cy="617" r="18" fill="#fff0cb"/><text x="535" y="623" text-anchor="middle" class="ink num">2</text>
+    <text x="567" y="620" class="ink cardtitle">graph_input_guardrail · trusted Python</text>
+    <text x="530" y="650" class="muted body">Checks the request and customer access before any private knowledge lookup.</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="500" y="705" width="600" height="90" rx="18" fill="#fff8e6" stroke="#d69b24" stroke-width="2"/>
+    <text x="800" y="740" text-anchor="middle" class="ink cardtitle">Input allowed?</text>
+    <text x="800" y="770" text-anchor="middle" class="muted body">No → safe response and skip knowledge + resolution. Yes → continue below.</text>
+  </g>
+  <path d="M500 750H296V1430H492" fill="none" stroke="#8b7ab9" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="90" y="854" width="330" height="92" rx="16" fill="#f4f1fb" stroke="#8b7ab9" stroke-width="1.5"/>
+  <text x="255" y="887" text-anchor="middle" class="ink cardtitle">Blocked input</text>
+  <text x="255" y="914" text-anchor="middle" class="muted small">Safe response; private retrieval skipped</text>
+  <text x="314" y="735" class="muted tiny">NO</text>
+
+  <!-- Knowledge stage -->
+  <g filter="url(#shadow)">
+    <rect x="500" y="820" width="600" height="168" rx="20" fill="#fff" stroke="#159caa" stroke-width="2"/>
+    <circle cx="535" cy="854" r="18" fill="#e4f7f5"/><text x="535" y="860" text-anchor="middle" class="ink num">3</text>
+    <text x="567" y="857" class="ink cardtitle">graph_knowledge · KnowledgeAgent</text>
+    <text x="530" y="884" class="muted small">Python-bound, read-only lookups gather relevant evidence:</text>
+    <rect x="530" y="900" width="166" height="68" rx="12" fill="#effaf9"/>
+    <text x="613" y="927" text-anchor="middle" class="ink small">SQLite</text>
+    <text x="613" y="949" text-anchor="middle" class="muted small">authorized order</text>
+    <rect x="717" y="900" width="166" height="68" rx="12" fill="#f5f2ff"/>
+    <text x="800" y="927" text-anchor="middle" class="ink small">FAISS + BM25</text>
+    <text x="800" y="949" text-anchor="middle" class="muted small">policy evidence</text>
+    <rect x="904" y="900" width="166" height="68" rx="12" fill="#effaf9"/>
+    <text x="987" y="927" text-anchor="middle" class="ink small">Chroma</text>
+    <text x="987" y="949" text-anchor="middle" class="muted small">customer memory</text>
+  </g>
+
+  <!-- Resolution and final check -->
+  <g filter="url(#shadow)">
+    <rect x="500" y="1015" width="600" height="95" rx="18" fill="#fff" stroke="#6844db" stroke-width="2"/>
+    <circle cx="535" cy="1048" r="18" fill="#eee9ff"/><text x="535" y="1054" text-anchor="middle" class="ink num">4</text>
+    <text x="567" y="1051" class="ink cardtitle">graph_resolution · ResolutionAgent</text>
+    <text x="530" y="1082" class="muted body">Drafts from the captured evidence only; retry drafts reuse the same evidence.</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="500" y="1135" width="600" height="100" rx="18" fill="#fff8e6" stroke="#d69b24" stroke-width="2"/>
+    <circle cx="535" cy="1168" r="18" fill="#fff0cb"/><text x="535" y="1174" text-anchor="middle" class="ink num">5</text>
+    <text x="567" y="1171" class="ink cardtitle">graph_final_guardrail · trusted Python</text>
+    <text x="530" y="1203" class="muted body">Checks privacy, evidence, order-status claims, confidence, and escalation needs.</text>
+    <text x="530" y="1225" class="muted small">DeepEval faithfulness is used here only when enabled for a policy question with evidence.</text>
+  </g>
+
+  <!-- Optional semantic validator note -->
+  <path d="M1100 1184H1160" fill="none" stroke="#159caa" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#tealArrow)"/>
+  <rect x="1172" y="1124" width="356" height="128" rx="18" fill="#eaf8f6" stroke="#159caa" stroke-width="1.5"/>
+  <text x="1200" y="1158" class="ink cardtitle">Optional DeepEval</text>
+  <text x="1200" y="1188" class="muted small">Prepared during knowledge lookup;</text>
+  <text x="1200" y="1210" class="muted small">checked with final validation each attempt.</text>
+  <text x="1200" y="1234" fill="#26727a" class="tiny">NOT A SEPARATE GRAPH NODE</text>
+
+  <!-- Final decision and retry branch -->
+  <g filter="url(#shadow)">
+    <rect x="500" y="1260" width="600" height="90" rx="18" fill="#fff8e6" stroke="#d69b24" stroke-width="2"/>
+    <text x="800" y="1296" text-anchor="middle" class="ink cardtitle">Final check passes?</text>
+    <text x="800" y="1325" text-anchor="middle" class="muted body">Yes → logging. No → retry only for an allowlisted grounding issue.</text>
+  </g>
+  <path d="M1100 1305H1164" fill="none" stroke="#d87543" stroke-width="2.5" marker-end="url(#orangeArrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="1175" y="1270" width="353" height="150" rx="18" fill="#fff0e8" stroke="#d87543" stroke-width="2"/>
+    <text x="1200" y="1305" class="ink cardtitle">Retry decision</text>
+    <text x="1200" y="1336" class="muted small">Retry only a recognized grounding mismatch</text>
+    <text x="1200" y="1358" class="muted small">and while attempts remain (maximum 3).</text>
+    <text x="1200" y="1392" fill="#8d4829" class="small">Otherwise use safe response + escalate.</text>
+  </g>
+  <path d="M1350 1270V1000H1106" fill="none" stroke="#d87543" stroke-width="2.5" stroke-dasharray="9 7" marker-end="url(#orangeArrow)"/>
+  <rect x="1140" y="964" width="368" height="35" rx="17" fill="#fff0e8"/>
+  <text x="1324" y="987" text-anchor="middle" fill="#8d4829" class="small">Retry → resolution; same evidence, reason feedback</text>
+  <text x="1112" y="1294" fill="#8d4829" class="tiny">NO</text>
+
+  <!-- Escalation and logging lane -->
+  <path d="M1175 1415V1446H1100" fill="none" stroke="#d87543" stroke-width="2.5" marker-end="url(#orangeArrow)"/>
+  <text x="1120" y="1440" fill="#8d4829" class="tiny">EXHAUSTED / NOT RETRYABLE</text>
+  <path d="M800 1350V1380" fill="none" stroke="#159caa" stroke-width="3" marker-end="url(#tealArrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="500" y="1380" width="600" height="105" rx="18" fill="#fff" stroke="#6844db" stroke-width="2"/>
+    <circle cx="535" cy="1415" r="18" fill="#eee9ff"/><text x="535" y="1421" text-anchor="middle" class="ink num">6</text>
+    <text x="567" y="1418" class="ink cardtitle">graph_log · LogAgent review</text>
+    <text x="530" y="1450" class="muted body">Recommends follow-up; trusted Python owns database writes and review routing.</text>
+    <text x="530" y="1474" class="muted small">If it flags a resolved ticket, the response is replaced with the safe response.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="500" y="1510" width="600" height="90" rx="18" fill="#eaf8f6" stroke="#159caa" stroke-width="2"/>
+    <text x="800" y="1545" text-anchor="middle" class="ink cardtitle">Trusted Python persists the ticket in SQLite</text>
+    <text x="800" y="1575" text-anchor="middle" class="muted body">Stores status, final response, escalation reason, sources, timeline, and attempts.</text>
+  </g>
+
+  <path d="M800 1600V1630" fill="none" stroke="#159caa" stroke-width="3" marker-end="url(#tealArrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="500" y="1630" width="600" height="95" rx="18" fill="#fff8e6" stroke="#d69b24" stroke-width="2"/>
+    <text x="800" y="1666" text-anchor="middle" class="ink cardtitle">Escalated?</text>
+    <text x="800" y="1697" text-anchor="middle" class="muted body">Yes → create pending staff-review record. No → skip review queue.</text>
+  </g>
+  <path d="M1100 1677H1160" fill="none" stroke="#d87543" stroke-width="2.5" marker-end="url(#orangeArrow)"/>
+  <rect x="1172" y="1628" width="356" height="112" rx="18" fill="#fff0e8" stroke="#d87543" stroke-width="1.5"/>
+  <text x="1200" y="1664" class="ink cardtitle">Human review queue</text>
+  <text x="1200" y="1694" class="muted small">Staff later records approve/reject</text>
+  <text x="1200" y="1717" class="muted small">and a note in the audit history.</text>
+  <text x="1112" y="1666" fill="#8d4829" class="tiny">YES</text>
+  <path d="M1350 1740V1780H1110" fill="none" stroke="#d87543" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#orangeArrow)"/>
+  <rect x="1172" y="1760" width="356" height="76" rx="16" fill="#f4f1fb" stroke="#8b7ab9"/>
+  <text x="1200" y="1792" class="ink small">Staff decision is recorded only:</text>
+  <text x="1200" y="1817" class="muted small">no refund, order change, or notification.</text>
+
+  <path d="M800 1725V1750" fill="none" stroke="#159caa" stroke-width="3" marker-end="url(#tealArrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="500" y="1750" width="600" height="76" rx="18" fill="#eee9ff" stroke="#6844db" stroke-width="2"/>
+    <text x="800" y="1782" text-anchor="middle" class="ink cardtitle">Return SupportResult to the API</text>
+    <text x="800" y="1808" text-anchor="middle" class="muted small">Ticket ID · final status · safe response · execution timeline</text>
+  </g>
+
+  <!-- Implementation note -->
+  <rect x="64" y="1845" width="1472" height="34" rx="14" fill="#e8e7f6"/>
+  <text x="84" y="1868" class="muted small">GraphFlow messages carry routing action only; customer content and evidence remain in request-scoped Python state.</text>
+</svg>

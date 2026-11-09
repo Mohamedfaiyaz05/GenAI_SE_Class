@@ -1,0 +1,16 @@
+fastapi==0.115.6
+uvicorn==0.34.0
+pydantic==2.10.5
+pydantic-settings
+python-dotenv==1.0.1
+certifi
+pymupdf==1.25.3
+langchain==0.3.13
+langchain-text-splitters==0.3.4
+langchain-core==0.3.28
+langchain-community==0.3.13
+langchain-openai==0.2.14
+faiss-cpu==1.12.0
+neo4j
+openai
+python-multipart

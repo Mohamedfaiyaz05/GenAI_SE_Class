@@ -1,0 +1,73 @@
+---
+title: ShopEase Support AI - GraphFlow Execution
+---
+flowchart TD
+    START(["Support API receives request<br/>Authenticated customer identity comes from server session"])
+    SCOPE["Create fresh GraphFlow and request-scoped state<br/>No customer state or agent history is shared<br/>Turn limit allows task setup, retries, and logging"]
+    QUERY["graph_query · QueryAgent<br/>Classify category, urgency, sentiment,<br/>summary, and explicitly stated order ID"]
+    INPUT["graph_input_guardrail · trusted Python<br/>Check input and order access before lookup"]
+    INPUT_OK{"Allowed to retrieve evidence?"}
+    SAFE_BLOCK["Use safe response<br/>Skip Knowledge and Resolution"]
+    KNOW["graph_knowledge · KnowledgeAgent<br/>Gather only the evidence needed"]
+    ORDER[("SQLite order lookup<br/>Authenticated customer scope")]
+    POLICY[("Policy retrieval<br/>FAISS + BM25")]
+    MEMORY[("Past support memory<br/>Customer-scoped Chroma")]
+    EVAL_SETUP{"DeepEval enabled,<br/>policy needed, evidence found?"}
+    EVAL_READY["Prepare Faithfulness validator<br/>Used by final checks; not a GraphFlow node"]
+    EVAL_SKIP["No semantic validator"]
+    RESOLVE["graph_resolution · ResolutionAgent<br/>Draft from captured evidence only<br/>Reuse same evidence on retries"]
+    FINAL["graph_final_guardrail · trusted Python<br/>Validate privacy, evidence, status claims,<br/>confidence, and optional semantic faithfulness"]
+    PASS{"Final check passes?"}
+    RETRYABLE{"Only retryable grounding reason<br/>and attempts remain (< 3)?"}
+    FEEDBACK["Record validator reasons as retry feedback<br/>Keep retrieved evidence unchanged"]
+    ESCALATE["Do not send unsupported draft<br/>Select safe response and escalation reason"]
+    LOG["graph_log · LogAgent review<br/>Recommend follow-up; Python owns persistence"]
+    LOG_ESC{"Resolved ticket but<br/>LogAgent recommends follow-up?"}
+    LOG_ESCALATE["Override with safe response<br/>Mark ticket for human follow-up"]
+    SAVE["Trusted Python saves final ticket<br/>SQLite ticket and answer-attempt count"]
+    REVIEW{"Final status is Escalated?"}
+    QUEUE[["Register pending staff review<br/>Human review repository + audit trail"]]
+    NO_QUEUE["No pending review record"]
+    CUSTOMER_MEMORY["If customer-scoped memory is available,<br/>save verified ticket history"]
+    RESULT(["Return SupportResult<br/>Ticket ID, status, safe response, timeline"])
+    STAFF["Later: staff reviews in protected console<br/>Records approve/reject and note"]
+    BOUNDARY["Recorded decision only<br/>No automatic refund, order change,<br/>or customer notification"]
+
+    START --> SCOPE --> QUERY --> INPUT --> INPUT_OK
+    INPUT_OK -- No --> SAFE_BLOCK --> LOG
+    INPUT_OK -- Yes --> KNOW
+    KNOW --> ORDER
+    KNOW --> POLICY
+    KNOW --> MEMORY
+    ORDER --> EVAL_SETUP
+    POLICY --> EVAL_SETUP
+    MEMORY --> EVAL_SETUP
+    EVAL_SETUP -- Yes --> EVAL_READY --> RESOLVE
+    EVAL_SETUP -- No --> EVAL_SKIP --> RESOLVE
+    RESOLVE --> FINAL --> PASS
+    PASS -- Yes --> LOG
+    PASS -- No --> RETRYABLE
+    RETRYABLE -- Yes --> FEEDBACK --> RESOLVE
+    RETRYABLE -- No --> ESCALATE --> LOG
+    LOG --> LOG_ESC
+    LOG_ESC -- Yes --> LOG_ESCALATE --> SAVE
+    LOG_ESC -- No --> SAVE
+    ESCALATE --> SAVE
+    SAVE --> REVIEW
+    REVIEW -- Yes --> QUEUE --> CUSTOMER_MEMORY
+    REVIEW -- No --> NO_QUEUE --> CUSTOMER_MEMORY
+    CUSTOMER_MEMORY --> RESULT
+    QUEUE -. later staff action .-> STAFF --> BOUNDARY
+
+    classDef boundary fill:#eee9ff,stroke:#6844db,color:#20233f,stroke-width:2px;
+    classDef stage fill:#ffffff,stroke:#6844db,color:#20233f,stroke-width:2px;
+    classDef decision fill:#fff8e6,stroke:#d69b24,color:#493b18,stroke-width:2px;
+    classDef data fill:#e7f8f6,stroke:#159caa,color:#123f47,stroke-width:2px;
+    classDef review fill:#fff0e8,stroke:#d87543,color:#63351e,stroke-width:2px;
+    classDef safe fill:#f4f1fb,stroke:#8b7ab9,color:#39314f,stroke-width:2px;
+    class START,RESULT boundary;
+    class SCOPE,QUERY,INPUT,KNOW,RESOLVE,FINAL,LOG stage;
+    class INPUT_OK,EVAL_SETUP,PASS,RETRYABLE,LOG_ESC,REVIEW decision;
+    class ORDER,POLICY,MEMORY,SAVE,CUSTOMER_MEMORY data;
+    class QUEUE,STAFF review;
+    class SAFE_BLOCK,EVAL_READY,EVAL_SKIP,FEEDBACK,ESCALATE,NO_QUEUE,BOUNDARY safe;

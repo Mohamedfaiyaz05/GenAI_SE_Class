@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "How much I can invest on crops and how to make my priority as a agriculturists"
+  },
+  {
+    "role": "assistant",
+    "content": "To provide a precise answer, could you clarify which jurisdiction you are referring to for your investment in crops? Are you asking about Tamil Nadu or another region? Additionally, are you looking for specific investment amounts or general guidance on prioritizing agricultural practices?"
+  },
+  {
+    "role": "user",
+    "content": "yes i am looking for specific region"
+  },
+  {
+    "role": "assistant",
+    "content": "Could you please specify which region you are referring to for your investment in crops? Are you asking about Tamil Nadu or another area?"
+  },
+  {
+    "role": "user",
+    "content": "Please point out all regions"
+  },
+  {
+    "role": "assistant",
+    "content": "The regions in Tamil Nadu are categorized into seven agro-climatic zones as follows:\n\n1. Cauvery Delta Zone (Light Green)\n2. High Altitude and Hilly Zone (Yellow)\n3. High Rainfall Zone (Light Blue)\n4. North Eastern Zone (Pink)\n5. North Western Zone (Purple)\n6. Southern Zone (Orange)\n7. Western Zone (Blue) [agri_schemes_2026_27.pdf, p. 19]."
+  }
+]

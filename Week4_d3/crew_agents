@@ -1,0 +1,19 @@
+from crewai import Agent
+from dotenv import load_dotenv
+load_dotenv()
+
+from crewai import LLM
+
+# Our main AI brain for the whole course
+llm = LLM(model="gpt-4o-mini")
+
+print("OpenAI brain is ready!")
+guide = Agent(
+    role="Travel Guide",
+    goal="Suggest fun places to visit",
+    backstory="You have toured 50 countries and love helping travelers.",
+    llm=llm,
+    verbose = True
+)
+
+print("Agent created:", guide.role)

@@ -1,0 +1,401 @@
+{
+  "schema_version": 2,
+  "chunk_size": 1000,
+  "chunk_overlap": 150,
+  "files": {
+    "shipping_policy.md": {
+      "sha256": "07007a2398c0bb68e48d37f761ee585e33aefa21e02b75fb627db55450b42b0a",
+      "size_bytes": 6893
+    },
+    "refund_policy.md": {
+      "sha256": "498ff77018a844f89fe12bdedf0fdb8b17bf9cb7c75202c6c2df0957985b7d4e",
+      "size_bytes": 7486
+    },
+    "account_and_login.md": {
+      "sha256": "84c12c6c3c168139367bf5eeb77c596ed88d674097cb43401a9683ab37652136",
+      "size_bytes": 5271
+    },
+    "product_faq.md": {
+      "sha256": "e475a468689f50a33b9064280a04d25485f23393534c5c84617c45174e2e0d17",
+      "size_bytes": 7795
+    }
+  },
+  "source_signatures": {
+    "shipping_policy.md": "07007a2398c0bb68e48d37f761ee585e33aefa21e02b75fb627db55450b42b0a",
+    "refund_policy.md": "498ff77018a844f89fe12bdedf0fdb8b17bf9cb7c75202c6c2df0957985b7d4e",
+    "account_and_login.md": "84c12c6c3c168139367bf5eeb77c596ed88d674097cb43401a9683ab37652136",
+    "product_faq.md": "e475a468689f50a33b9064280a04d25485f23393534c5c84617c45174e2e0d17"
+  },
+  "chunks": [
+    {
+      "chunk_id": "policy_ed750f6151e2e38eca93",
+      "source": "shipping_policy.md",
+      "category": "Shipping",
+      "section": "1. Order processing and delivery estimates",
+      "policy_id": "SHIP-001",
+      "policy_version": "1.2",
+      "effective_date": "2026-11-09",
+      "content": "## 1. Order processing and delivery estimates\n\n- Orders are normally processed within **1–2 business days** after payment confirmation, excluding public holidays.\n- **Standard delivery:** typically **3–7 business days after dispatch**.\n- **Express delivery:** typically **1–3 business days after dispatch**, where available.\n- The estimated delivery date shown at checkout or in **My Orders** is an estimate, not a guaranteed delivery commitment.\n- Business days exclude Sundays and applicable courier/public holidays. Remote delivery areas, peak-sale periods, severe weather, and transport disruptions may extend timelines.\n- An order marked **Processing** has not necessarily been handed to the courier; **Shipped/In Transit** means dispatch has occurred."
+    },
+    {
+      "chunk_id": "policy_2683b20e2ce958b135df",
+      "source": "shipping_policy.md",
+      "category": "Shipping",
+      "section": "2. Tracking an order",
+      "policy_id": "SHIP-001",
+      "policy_version": "1.2",
+      "effective_date": "2026-11-09",
+      "content": "## 2. Tracking an order\n\n1. Sign in to **ShopEase → My Orders**.\n2. Open the relevant order and select **Track Shipment**.\n3. Check the latest courier scan and estimated delivery date. The dispatch email may also contain a tracking link.\n\nTracking scans can take **up to 24 hours after dispatch** to appear. If no tracking update appears for **more than 48 hours after dispatch**, the customer may contact support for a tracking review. The AI must not claim to know the package's current location without an authorized tracking integration."
+    },
+    {
+      "chunk_id": "policy_17cfadb619487329dab7",
+      "source": "shipping_policy.md",
+      "category": "Shipping",
+      "section": "3. Delayed delivery",
+      "policy_id": "SHIP-001",
+      "policy_version": "1.2",
+      "effective_date": "2026-11-09",
+      "content": "## 3. Delayed delivery\n\n- If the estimated delivery date passed **1–3 business days ago**, advise the customer to review tracking and allow for a short courier delay. This alone does not require human escalation.\n- If the package is **more than 3 business days past the estimated delivery date**, a human support representative must investigate with the courier. Mark the case **Escalated**.\n- If tracking shows **no movement for 5 business days**, escalate for a delivery investigation even if the estimated date has not yet passed.\n- If the customer needs the item for a time-sensitive event, acknowledge the concern but do not guarantee delivery or compensation. Escalate if there is a high-urgency situation or a request for an action the AI cannot perform.\n- Delivery delay does not automatically entitle the customer to a refund or replacement. Any refund request must be assessed under the separate refund policy."
+    },
+    {
+      "chunk_id": "policy_a41aead96a6296c6db1e",
+      "source": "shipping_policy.md",
+      "category": "Shipping",
+      "section": "4. Delivered but not received / missing package",
+      "policy_id": "SHIP-001",
+      "policy_version": "1.2",
+      "effective_date": "2026-11-09",
+      "content": "## 4. Delivered but not received / missing package\n\nIf tracking says **Delivered** but the customer cannot find the parcel:\n\n1. Ask them to check the doorstep, reception/security desk, safe-drop location, and household members, where appropriate.\n2. Ask them to confirm the delivery address shown in their order confirmation, without sharing sensitive details publicly.\n3. If still missing, **escalate immediately** for proof-of-delivery review. Do not assert that the courier or customer is at fault.\n\nSuspected theft, forged delivery confirmation, or delivery fraud must be escalated. The AI must not promise a replacement or refund before investigation."
+    },
+    {
+      "chunk_id": "policy_b827e8d6b69b25eada24",
+      "source": "shipping_policy.md",
+      "category": "Shipping",
+      "section": "5. Address changes, cancellations, and failed delivery attempts",
+      "policy_id": "SHIP-001",
+      "policy_version": "1.2",
+      "effective_date": "2026-11-09",
+      "content": "## 5. Address changes, cancellations, and failed delivery attempts\n\n- **Before dispatch:** Customers may request an address correction or cancellation through human support; approval depends on order status.\n- **After dispatch:** Address changes and shipment interception are not guaranteed and require human support/courier confirmation.\n- **Failed delivery attempts:** Customers should follow the courier's official reattempt instructions shown in tracking. Reattempt schedules vary by courier and location.\n- **Returned to sender:** If an undelivered parcel is being returned to the warehouse, human support must confirm next steps. The AI must not promise automatic reshipment or reimbursement."
+    },
+    {
+      "chunk_id": "policy_6235bb79cbbca0e5851a",
+      "source": "shipping_policy.md",
+      "category": "Shipping",
+      "section": "6. Damaged parcels, wrong items, and partial deliveries",
+      "policy_id": "SHIP-001",
+      "policy_version": "1.2",
+      "effective_date": "2026-11-09",
+      "content": "## 6. Damaged parcels, wrong items, and partial deliveries\n\n- For a **visibly damaged outer parcel**, advise the customer to photograph the packaging and item before discarding materials, where safe.\n- For **wrong, damaged, or missing items**, ask the customer to retain the order details and photographs, then refer to the **product FAQ** and **refund policy** for eligibility and timelines.\n- For **split shipments**, different items in one order may have different tracking numbers and delivery dates. Check each shipment in **My Orders**.\n- Escalate cases involving unsafe or hazardous damage, suspected tampering, or disputed delivery evidence."
+    },
+    {
+      "chunk_id": "policy_fc3e287783b193278f93",
+      "source": "shipping_policy.md",
+      "category": "Shipping",
+      "section": "7. Shipping charges and service availability",
+      "policy_id": "SHIP-001",
+      "policy_version": "1.2",
+      "effective_date": "2026-11-09",
+      "content": "## 7. Shipping charges and service availability\n\n- Shipping fees and express-delivery eligibility are displayed at checkout and may vary by location, basket value, and promotion.\n- The AI must not invent a free-shipping threshold, express availability, or shipping-fee refund rule when the order details or applicable promotion are unavailable.\n- International shipping is **not covered by this policy**; such inquiries must be referred to human support for confirmation."
+    },
+    {
+      "chunk_id": "policy_fae6f2da962e2224c782",
+      "source": "shipping_policy.md",
+      "category": "Shipping",
+      "section": "8. Mandatory escalation triggers",
+      "policy_id": "SHIP-001",
+      "policy_version": "1.2",
+      "effective_date": "2026-11-09",
+      "content": "## 8. Mandatory escalation triggers\n\nMark the ticket **Escalated** when any of these applies:\n\n- Delivery is **more than 3 business days late**.\n- Tracking has not moved for **5 business days**.\n- Package is marked delivered but is missing.\n- Suspected fraud, theft, tampering, legal threats, or payment disputes.\n- Customer is extremely angry or the case is classified **High urgency**.\n- Relevant policy evidence is missing or the requested action requires order/courier access.\n\n**Escalation record:** Capture the order ID if supplied, issue summary, last known tracking status if supplied, relevant dates, source document, and reason for escalation. Never request payment-card numbers, passwords, or one-time passwords."
+    },
+    {
+      "chunk_id": "policy_8d02057fb303be7926db",
+      "source": "shipping_policy.md",
+      "category": "Shipping",
+      "section": "9. Delivery investigation and customer updates",
+      "policy_id": "SHIP-001",
+      "policy_version": "1.2",
+      "effective_date": "2026-11-09",
+      "content": "## 9. Delivery investigation and customer updates\n\n- A delivery investigation requires the **order ID**, the **estimated delivery date**, the **last tracking status**, and a concise description of the issue, when available.\n- Human support may review courier scan history, delivery attempts, proof of delivery, and any customer-provided photographs or messages.\n- An investigation does **not** guarantee a refund, replacement, or a revised delivery date. The outcome depends on verified shipment details and applicable order policies.\n- Customers should retain their order confirmation and any courier notifications until the case is closed.\n- If a courier or support representative supplies an investigation reference, customers can include it in later follow-ups to avoid repeating details.\n- If the customer follows up while an investigation is pending, the AI may explain the process but must **not** invent an investigation status, outcome, or completion deadline."
+    },
+    {
+      "chunk_id": "policy_b946af2abc4b50761722",
+      "source": "refund_policy.md",
+      "category": "Refund",
+      "section": "1. Return eligibility and time window",
+      "policy_id": "REF-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 1. Return eligibility and time window\n\n- Most unused, eligible products may be returned **within 15 calendar days of confirmed delivery**.\n- The product should be in its original condition, with accessories, manuals, tags, and packaging where reasonably available. Trying on footwear indoors to check fit does not, by itself, make it used.\n- Proof of purchase is required: an order ID or receipt from ShopEase.\n- Returns requested outside the 15-day window require human review; approval is not guaranteed.\n- Products marked **Final Sale** or **Non-returnable** on their product page are not eligible for a change-of-mind return, but a verified defect or incorrect item can still be reviewed under applicable consumer protections."
+    },
+    {
+      "chunk_id": "policy_2a2eaf176620bb08c412",
+      "source": "refund_policy.md",
+      "category": "Refund",
+      "section": "2. How to request a return",
+      "policy_id": "REF-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 2. How to request a return\n\n1. Sign in to **ShopEase → My Orders** and select the delivered item.\n2. Choose **Return / Replace**, select the reason, and provide the requested details.\n3. If self-service is unavailable, contact human support with the order ID, item name, delivery date, and reason for return.\n4. Follow the return instructions provided after the request is approved. Do not ship an item to an unverified address.\n\nA return request is **not the same as an approved refund**. The order must be checked for eligibility and, where required, the returned product inspected."
+    },
+    {
+      "chunk_id": "policy_15f9d1cd740e92abcdfa",
+      "source": "refund_policy.md",
+      "category": "Refund",
+      "section": "3. Refund methods and processing timelines",
+      "policy_id": "REF-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 3. Refund methods and processing timelines\n\n- Once an eligible return is received and approved after inspection, ShopEase normally **initiates the refund within 5 business days**.\n- Refunds are ordinarily issued to the **original payment method**. The bank or payment provider may take an additional **5–10 business days** to reflect the credit.\n- Cash-on-delivery refunds require human support to arrange an approved refund method; customers must not share bank details in a public chat.\n- Promotional discounts, vouchers, and loyalty credits may be reinstated or adjusted according to the original offer terms; the AI must not promise cash reimbursement for promotional credits.\n- Original delivery fees and optional express-shipping charges are generally **non-refundable for change-of-mind returns**. Charges resulting from a confirmed ShopEase fulfillment error are reviewed by support."
+    },
+    {
+      "chunk_id": "policy_0319410d448c634899d4",
+      "source": "refund_policy.md",
+      "category": "Refund",
+      "section": "4. Damaged, defective, or incorrect items",
+      "policy_id": "REF-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 4. Damaged, defective, or incorrect items\n\n- Report a damaged, defective, or incorrect item **within 7 calendar days of delivery** when possible to enable prompt verification.\n- Provide the order ID, a description of the issue, and photographs or a short video if safe and available. Do not operate a product that appears electrically or physically unsafe.\n- For a confirmed manufacturing defect, transit damage, or incorrect item, ShopEase may offer an eligible **replacement or refund**, subject to stock and verification.\n- The customer may request a replacement through **My Orders → Return / Replace**. Approval and shipment timing are not guaranteed until verified.\n- A visibly broken blender reported shortly after delivery should receive these replacement-request steps. **Do not claim a replacement has already been approved or dispatched.**\n- If an item is dangerous, leaking, overheating, or causing injury, advise the customer to stop using it and escalate for urgent human review."
+    },
+    {
+      "chunk_id": "policy_06ea5e93587aa7ea8859",
+      "source": "refund_policy.md",
+      "category": "Refund",
+      "section": "5. Exchanges, partial orders, and bundles",
+      "policy_id": "REF-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 5. Exchanges, partial orders, and bundles\n\n- Size or color exchanges are available only where the product is eligible and replacement stock exists. Otherwise, an eligible return and new purchase may be necessary.\n- If only one item in a multi-item order is returned, any approved refund applies to that item and its eligible adjustments, not automatically to the full order.\n- Bundle discounts and buy-one-get-one promotions may be recalculated if part of the qualifying purchase is returned.\n- If an order arrived in multiple shipments, the return window for each eligible item starts from **that item's confirmed delivery date**."
+    },
+    {
+      "chunk_id": "policy_fe81bb8e4c6ca90f6f39",
+      "source": "refund_policy.md",
+      "category": "Refund",
+      "section": "6. Items with special restrictions",
+      "policy_id": "REF-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 6. Items with special restrictions\n\n- Opened personal-care and hygiene products, perishable goods, customized or personalized items, and activated digital products are generally **not returnable for change of mind** when clearly disclosed at purchase.\n- Apparel and footwear may be returned within the standard window if they meet condition requirements; worn, washed, or altered products may be rejected after inspection.\n- Products covered by a manufacturer warranty may require a warranty-service assessment after the standard return window.\n- If a product's listing gives a different return condition, human support must verify the order-specific terms before confirming eligibility."
+    },
+    {
+      "chunk_id": "policy_3cda7f2207d4b9a92ceb",
+      "source": "refund_policy.md",
+      "category": "Refund",
+      "section": "7. Cancellations and undelivered orders",
+      "policy_id": "REF-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 7. Cancellations and undelivered orders\n\n- Before dispatch, customers may request cancellation through **My Orders** if the option is available; otherwise, human support must review it.\n- Once dispatched, cancellation or interception is not guaranteed. The customer may need to follow the applicable delivery and return process.\n- For an order that was never delivered, do not describe the case as a completed customer return. Human support must verify the delivery or courier outcome before deciding on reimbursement.\n- Refunds for canceled prepaid orders, when approved, are normally initiated within **5 business days**; payment-provider posting times may vary."
+    },
+    {
+      "chunk_id": "policy_4d936d3fed43a2c890ed",
+      "source": "refund_policy.md",
+      "category": "Refund",
+      "section": "8. Refund status, duplicate charges, and payment disputes",
+      "policy_id": "REF-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 8. Refund status, duplicate charges, and payment disputes\n\n- Customers can review an available refund status in **My Orders** and compare it with the original payment statement.\n- A refund shown as initiated may not yet be posted by the bank. Customers should allow the stated provider processing period before requesting a status investigation.\n- **Duplicate or unauthorized charges, suspected fraud, chargebacks, and threats of legal action require immediate human escalation**, even if the customer also asks for a refund.\n- Do not assert that a disputed charge has been reversed, promise a refund amount, or request a full card number, CVV, PIN, password, or one-time password.\n- If a customer says they were charged three times, mark the case **Escalated** and request only non-sensitive transaction references through an approved support channel."
+    },
+    {
+      "chunk_id": "policy_a339ccc1762f4488bedb",
+      "source": "refund_policy.md",
+      "category": "Refund",
+      "section": "9. Exceptions, investigations, and escalation",
+      "policy_id": "REF-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 9. Exceptions, investigations, and escalation\n\nEscalate to human support when:\n\n- A return is outside the standard window or eligibility cannot be verified.\n- An item is unsafe, hazardous, missing from the returned parcel, or disputed after inspection.\n- The refund is overdue beyond the stated initiation or bank-posting periods and requires transaction investigation.\n- There is a payment dispute, suspected fraud, legal threat, or **High-urgency / extremely angry** complaint.\n- Policy evidence is insufficient, product-specific terms conflict, or the customer requests an action that requires account/payment access.\n\nFor investigation, record the order ID if provided, item, delivery date, reason, relevant evidence, payment/refund reference if safely available, and escalation reason. **AI support may explain procedures but cannot approve returns, issue payments, modify transactions, or guarantee outcomes.**"
+    },
+    {
+      "chunk_id": "policy_0495198c6b685c1f0958",
+      "source": "account_and_login.md",
+      "category": "Account",
+      "section": "1. Account Registration and Sign-In",
+      "policy_id": "ACC-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 1. Account Registration and Sign-In\n\nCustomers can create a ShopEase account using an email address or mobile number and must verify the contact method when prompted. Existing customers can sign in with their registered credentials. A valid account is required to view saved addresses, order history, and support requests. Guest-order assistance is available through customer support after order ownership is verified."
+    },
+    {
+      "chunk_id": "policy_e8ae7eb49d1a3ae2416b",
+      "source": "account_and_login.md",
+      "category": "Account",
+      "section": "2. Forgotten Password and Password Reset",
+      "policy_id": "ACC-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 2. Forgotten Password and Password Reset\n\nCustomers who forget their password should select **Forgot Password** on the sign-in page, enter their registered email address, and follow the reset link sent to that address. Password reset links expire after **30 minutes** and can be used only once. If the link expires, the customer should request a new one. Customers should check spam or junk folders if the email does not arrive within **10 minutes**. For security, support agents cannot view, disclose, or directly reset a customer's password."
+    },
+    {
+      "chunk_id": "policy_106352cdf2ca406cc844",
+      "source": "account_and_login.md",
+      "category": "Account",
+      "section": "3. One-Time Password (OTP) and Verification Issues",
+      "policy_id": "ACC-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 3. One-Time Password (OTP) and Verification Issues\n\nAn OTP may be required to verify sign-in or changes to sensitive account details. OTPs expire after **5 minutes**. Customers should use only the most recent OTP and avoid repeatedly requesting new codes. If an OTP does not arrive, they should confirm network connectivity and the registered contact details, then retry after **2 minutes**. After repeated failures, support can initiate a verification review. ShopEase staff will never ask customers to share passwords, OTPs, or recovery codes."
+    },
+    {
+      "chunk_id": "policy_fbe7a35d7442a0d31dc6",
+      "source": "account_and_login.md",
+      "category": "Account",
+      "section": "4. Account Lockouts and Suspicious Sign-In Attempts",
+      "policy_id": "ACC-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 4. Account Lockouts and Suspicious Sign-In Attempts\n\nFor account protection, **5 unsuccessful sign-in attempts within 15 minutes** trigger a temporary **30-minute lockout**. Customers can wait for the lockout to expire or use the password-reset process. If the account remains inaccessible after the lockout and reset steps, the issue must be referred to human support. Customers who do not recognize a sign-in alert should change their password immediately if they still have access and contact the security support team."
+    },
+    {
+      "chunk_id": "policy_e6f28de49e3cd08e6b76",
+      "source": "account_and_login.md",
+      "category": "Account",
+      "section": "5. Updating Account Details",
+      "policy_id": "ACC-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 5. Updating Account Details\n\nCustomers can update their display name, contact preferences, and saved addresses from **My Account > Profile & Settings**. Changing the registered email address or phone number requires verification of the existing account and the new contact method. Changes to an address saved in the profile do **not** automatically update an order that has already been placed. Support agents must not claim to have changed account information without confirmation from an authorized system."
+    },
+    {
+      "chunk_id": "policy_4610649da0c216133d5e",
+      "source": "account_and_login.md",
+      "category": "Account",
+      "section": "6. Compromised Accounts and Unauthorized Activity",
+      "policy_id": "ACC-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 6. Compromised Accounts and Unauthorized Activity\n\nCustomers who suspect unauthorized access should stop using suspicious links, change their password if possible, and review recent account activity. Reports of unknown orders, altered contact details, unauthorized payments, or suspected identity theft require **immediate escalation to the security or payments support team**. Human support will verify ownership before restoring access or changing sensitive details. AI agents must not promise that an account has been secured, that a payment has been reversed, or that fraudulent activity has been resolved."
+    },
+    {
+      "chunk_id": "policy_9647584994c3644c7a1b",
+      "source": "account_and_login.md",
+      "category": "Account",
+      "section": "7. Account Recovery and Identity Verification",
+      "policy_id": "ACC-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 7. Account Recovery and Identity Verification\n\nIf a customer has lost access to their registered email address or phone number, self-service password reset may not be possible. Human support can begin an account-recovery review using an approved verification procedure. Customers may be asked for limited order-related information through an official secure channel. They must **never** be asked to send passwords, full payment-card numbers, CVVs, OTPs, or government identity documents through the support chat. Recovery approval and timing depend on successful verification; access cannot be guaranteed."
+    },
+    {
+      "chunk_id": "policy_57f722ef2ca5b598f529",
+      "source": "account_and_login.md",
+      "category": "Account",
+      "section": "8. Account Deactivation and Data Requests",
+      "policy_id": "ACC-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 8. Account Deactivation and Data Requests\n\nCustomers can request account deactivation or deletion through **My Account > Privacy & Account Requests**, or contact human support if they cannot sign in. Requests may require identity verification. Certain transaction records may need to be retained for legal, fraud-prevention, or accounting purposes. Data access, correction, and deletion requests are handled by the privacy support team; AI agents cannot confirm deletion or specify completion dates without a verified case update."
+    },
+    {
+      "chunk_id": "policy_ce24df409894c9a0934c",
+      "source": "account_and_login.md",
+      "category": "Account",
+      "section": "9. Login Troubleshooting and Escalation",
+      "policy_id": "ACC-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 9. Login Troubleshooting and Escalation\n\nFor ordinary sign-in failures, customers should confirm their email address, check for typing errors, use the password-reset option, update the app or browser, and try a private browsing session if the problem persists. Support should avoid asking for sensitive credentials or diagnosing an outage without verified service information.\n\nEscalate when an account appears compromised; unauthorized orders or payments are reported; a customer cannot access their registered recovery method; verification repeatedly fails; an account remains locked after the documented steps; or a customer raises a legal, privacy, or identity-theft concern. A routine forgotten-password request can be **Resolved** by giving the documented self-service steps, without claiming the password was changed."
+    },
+    {
+      "chunk_id": "policy_eef43a90ca2f116dce19",
+      "source": "product_faq.md",
+      "category": "Product",
+      "section": "1. Product Information and Specifications",
+      "policy_id": "PROD-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 1. Product Information and Specifications\n\n- Product descriptions may include dimensions, materials, color, compatibility, care instructions, and included accessories. Customers should refer to the specific product page and model number before purchasing.\n- Images are illustrative; minor appearance differences can occur because of lighting or display settings. Material differences in model, advertised features, or supplied items should be reported for review.\n- Electrical products should be used only with the voltage, accessories, and operating instructions stated by the manufacturer.\n- If an important specification is missing or unclear, support should request the product name or SKU and refer the question for verification rather than guess."
+    },
+    {
+      "chunk_id": "policy_e8e15a49ff965cbb8d84",
+      "source": "product_faq.md",
+      "category": "Product",
+      "section": "2. Availability, Variants, and Preorders",
+      "policy_id": "PROD-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 2. Availability, Variants, and Preorders\n\n- Stock and delivery estimates shown on product pages can change before checkout. Adding an item to a cart does not reserve stock.\n- Color, size, and model variants may have different prices, stock, or delivery estimates.\n- Preorder release dates are estimates unless explicitly confirmed in the order record. Customers should review the product listing for applicable preorder conditions.\n- AI support cannot reserve inventory, confirm real-time availability without an integration, or guarantee restock dates."
+    },
+    {
+      "chunk_id": "policy_5cef6fdd3d1b6e52b9ff",
+      "source": "product_faq.md",
+      "category": "Product",
+      "section": "3. Damaged, Defective, or Nonfunctional Products",
+      "policy_id": "PROD-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 3. Damaged, Defective, or Nonfunctional Products\n\n- Customers should report an item that arrives broken, leaking, unsafe, or not functioning as described as soon as practical, preferably **within 7 calendar days of delivery**, to help preserve delivery evidence. This reporting preference does not eliminate applicable statutory rights or manufacturer warranty coverage.\n- To request a review, open **My Orders → Return / Replace**, choose **Damaged / Defective**, and provide the order ID, product/model, description, and clear photographs or a short video if safe to capture.\n- Customers must **stop using a product that sparks, overheats, leaks hazardous contents, or presents an injury risk**. Do not ask them to operate it again for troubleshooting.\n- After verification, eligible outcomes may include a replacement, repair, or refund depending on the product, stock, and applicable policy. **Approval is not automatic.**"
+    },
+    {
+      "chunk_id": "policy_75439d34b9c965e65c2a",
+      "source": "product_faq.md",
+      "category": "Product",
+      "section": "4. Wrong Items, Missing Parts, and Incomplete Orders",
+      "policy_id": "PROD-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 4. Wrong Items, Missing Parts, and Incomplete Orders\n\n- For an incorrect product, variant, or quantity, customers should compare the received item with the order confirmation and report the mismatch through **My Orders → Get Help**.\n- For missing accessories, include the product model, packing-list details if available, and the missing component. Some accessories are sold separately and are not included unless listed on the product page.\n- Orders may ship in multiple parcels. Customers should check tracking for all shipments before reporting a missing item.\n- ShopEase may request photos of the package label and contents to investigate a packing error. Support must not promise a replacement part until the issue is verified."
+    },
+    {
+      "chunk_id": "policy_1bab00b6978d56c264db",
+      "source": "product_faq.md",
+      "category": "Product",
+      "section": "5. Replacements, Exchanges, and Inspection",
+      "policy_id": "PROD-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 5. Replacements, Exchanges, and Inspection\n\n- A customer can request a replacement for an eligible damaged, defective, or incorrect item through **My Orders → Return / Replace**.\n- The support team may arrange inspection or return pickup before approving the replacement. Customers should retain accessories and packaging where reasonably possible.\n- Replacement availability depends on the same product or approved equivalent being in stock. If unavailable, human support reviews alternative remedies.\n- Size or color exchanges for non-defective items are subject to product eligibility and the **15-calendar-day return window** measured from confirmed delivery; an exchange is not guaranteed.\n- AI support can explain how to submit a request but cannot create a replacement order, authorize a pickup, or promise an exact delivery date without a connected order system."
+    },
+    {
+      "chunk_id": "policy_09aa5267c7fc4182a507",
+      "source": "product_faq.md",
+      "category": "Product",
+      "section": "6. Manufacturer Warranty and Repairs",
+      "policy_id": "PROD-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 6. Manufacturer Warranty and Repairs\n\n- Warranty duration, covered defects, exclusions, and service locations depend on the manufacturer and product listing. **There is no universal ShopEase warranty duration for all products.**\n- Manufacturing defects may be covered by a valid manufacturer warranty; accidental damage, misuse, unauthorized modifications, and ordinary wear are commonly excluded unless the specific warranty states otherwise.\n- Customers should keep their invoice, model number, and serial number where applicable. Warranty claims may require manufacturer assessment or an authorized service center.\n- A warranty claim is different from a standard return. Support must not guarantee free repairs or replacement without verifying the product's warranty terms."
+    },
+    {
+      "chunk_id": "policy_2cdae28faffa0c599955",
+      "source": "product_faq.md",
+      "category": "Product",
+      "section": "7. Product Safety, Usage, and Care",
+      "policy_id": "PROD-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 7. Product Safety, Usage, and Care\n\n- Customers should follow the manufacturer's user manual for installation, cleaning, charging, maintenance, and safe operation.\n- For appliances, avoid using damaged power cords or operating a device with signs of overheating. Disconnect power if safe to do so.\n- For products involving batteries, chemicals, or sharp components, do not provide improvised repair instructions. Direct the customer to manufacturer guidance or qualified service.\n- If a product causes injury, smoke, fire, or an immediate safety concern, advise the customer to stop use, seek appropriate emergency assistance where necessary, and escalate the case urgently."
+    },
+    {
+      "chunk_id": "policy_266175d9a8041d387ce9",
+      "source": "product_faq.md",
+      "category": "Product",
+      "section": "8. Product Authenticity and Listing Discrepancies",
+      "policy_id": "PROD-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 8. Product Authenticity and Listing Discrepancies\n\n- Customers who suspect a counterfeit item, altered serial number, misleading listing, or missing certification should contact support with their order ID and relevant evidence.\n- Product authenticity and certification disputes require specialist review; support must not declare an item genuine or counterfeit without verification.\n- If the received product materially differs from the advertised model or features, support should document the discrepancy and arrange a review of the available remedy.\n- Product reviews and third-party seller claims do not override verified ShopEase order details or manufacturer documentation."
+    },
+    {
+      "chunk_id": "policy_068a7d3be271c00afeff",
+      "source": "product_faq.md",
+      "category": "Product",
+      "section": "9. Investigations and Human Escalation",
+      "policy_id": "PROD-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "## 9. Investigations and Human Escalation\n\nEscalate to human support when:\n\n- A product poses an electrical, fire, injury, chemical, or other immediate safety risk.\n- The customer reports suspected counterfeiting, a serious listing discrepancy, or a disputed inspection outcome.\n- A replacement requires inventory confirmation, manual authorization, warranty interpretation, or a repair assessment.\n- The customer reports fraud, legal action, extreme anger, or another High-urgency issue.\n- A requested product-specific fact is absent from the knowledge base and cannot be verified from an authorized source.\n- The request concerns a product or service not covered by the available catalog or policies, such as **custom-branded corporate gift cards**, and human confirmation is required."
+    },
+    {
+      "chunk_id": "policy_c19d675759d114385c00",
+      "source": "product_faq.md",
+      "category": "Product",
+      "section": "9. Investigations and Human Escalation",
+      "policy_id": "PROD-001",
+      "policy_version": "1.0",
+      "effective_date": "2026-11-09",
+      "content": "For investigations, record the order ID if available, product name/SKU, model or serial number where relevant, delivery date, issue description, and any safely supplied evidence. Never request payment credentials, passwords, or OTPs. **AI support may provide policy-based guidance but must not claim to have inspected an item, confirmed inventory, approved a replacement, or contacted the manufacturer unless a connected system confirms that action.**"
+    }
+  ]
+}

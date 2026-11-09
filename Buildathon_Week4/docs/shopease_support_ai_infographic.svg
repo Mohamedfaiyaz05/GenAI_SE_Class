@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1480" viewBox="0 0 1600 1480" role="img" aria-labelledby="title description">
+  <title id="title">ShopEase Support AI request flow and human review</title>
+  <desc id="description">An infographic showing query analysis, input guardrails, knowledge lookup, resolution, optional DeepEval, final guardrails, human review routing, ticket logging, and the difference between demo and GraphFlow modes.</desc>
+  <defs>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39227e"/>
+      <stop offset=".58" stop-color="#6844db"/>
+      <stop offset="1" stop-color="#159caa"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#25234f" flood-opacity=".10"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1L11 6L1 11Z" fill="#7664bd"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1L11 6L1 11Z" fill="#159caa"/>
+    </marker>
+    <style>
+      .ink{fill:#20233f;font-family:Inter,"Segoe UI",Arial,sans-serif}
+      .muted{fill:#626985;font-family:Inter,"Segoe UI",Arial,sans-serif}
+      .white{fill:#fff;font-family:Inter,"Segoe UI",Arial,sans-serif}
+      .eyebrow{font-size:15px;font-weight:800;letter-spacing:2.4px}
+      .title{font-size:42px;font-weight:800;letter-spacing:-1.3px}
+      .subtitle{font-size:18px;font-weight:450}
+      .cardtitle{font-size:21px;font-weight:750}
+      .body{font-size:16px;font-weight:450}
+      .small{font-size:14px;font-weight:500}
+      .tiny{font-size:12px;font-weight:800;letter-spacing:.7px}
+      .num{font-size:17px;font-weight:850}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1480" fill="#f2f1ff"/>
+  <rect x="0" y="0" width="1600" height="176" fill="url(#header)"/>
+  <text x="64" y="52" class="white eyebrow" opacity=".82">SHOP EASE CUSTOMER CARE</text>
+  <text x="64" y="108" class="white title">ShopEase Support AI</text>
+  <text x="64" y="145" class="white subtitle" opacity=".92">From a customer question to an evidence-based answer — with a person in the loop when needed.</text>
+  <rect x="1292" y="42" width="246" height="42" rx="21" fill="#fff" opacity=".16"/>
+  <text x="1415" y="68" text-anchor="middle" class="white tiny">SUPPORT FLOW · HUMAN REVIEW</text>
+
+  <text x="64" y="216" class="muted eyebrow">THE REQUEST JOURNEY</text>
+  <text x="64" y="241" class="muted small">Follow the numbered cards. The bottom row flows back from right to left.</text>
+
+  <!-- Main flow cards -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="270" width="340" height="238" rx="20" fill="#fff" stroke="#dedcf2" stroke-width="1.5"/>
+    <rect x="60" y="270" width="340" height="7" rx="4" fill="#6844db"/>
+    <circle cx="94" cy="313" r="20" fill="#eee9ff"/>
+    <text x="94" y="319" text-anchor="middle" class="ink num">01</text>
+    <rect x="291" y="295" width="86" height="27" rx="13" fill="#e8f7f2"/>
+    <text x="334" y="313" text-anchor="middle" fill="#16704f" class="tiny" font-family="Inter,Segoe UI,Arial">START</text>
+    <text x="84" y="363" class="ink cardtitle">Query analysis</text>
+    <text x="84" y="397" class="muted body">
+      <tspan x="84" dy="0">Understands the message and identifies</tspan>
+      <tspan x="84" dy="24">topic, order ID, urgency, and sentiment.</tspan>
+    </text>
+    <rect x="84" y="454" width="244" height="32" rx="10" fill="#f5f2ff"/>
+    <text x="99" y="475" class="muted small">“Where is ORD101?” → order question</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="440" y="270" width="340" height="238" rx="20" fill="#fff" stroke="#dedcf2" stroke-width="1.5"/>
+    <rect x="440" y="270" width="340" height="7" rx="4" fill="#6844db"/>
+    <circle cx="474" cy="313" r="20" fill="#eee9ff"/>
+    <text x="474" y="319" text-anchor="middle" class="ink num">02</text>
+    <text x="464" y="363" class="ink cardtitle">Input guardrails</text>
+    <text x="464" y="397" class="muted body">
+      <tspan x="464" dy="0">Checks the request and customer access</tspan>
+      <tspan x="464" dy="24">before private information is retrieved.</tspan>
+    </text>
+    <rect x="464" y="454" width="286" height="32" rx="10" fill="#fff4e8"/>
+    <text x="479" y="475" fill="#8b5419" class="small" font-family="Inter,Segoe UI,Arial">Blocked request skips private lookup</text>
+  </g>
+  <path d="M610 508V532" fill="none" stroke="#d69b24" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="440" y="538" width="340" height="48" rx="14" fill="#fff4e8" stroke="#f1d8b2"/>
+  <text x="610" y="558" text-anchor="middle" fill="#8b5419" class="tiny" font-family="Inter,Segoe UI,Arial">BLOCKED → SAFE REPLY</text>
+  <text x="610" y="576" text-anchor="middle" fill="#80563f" class="small" font-family="Inter,Segoe UI,Arial">No private knowledge lookup</text>
+
+  <g filter="url(#shadow)">
+    <rect x="820" y="270" width="340" height="238" rx="20" fill="#fff" stroke="#dedcf2" stroke-width="1.5"/>
+    <rect x="820" y="270" width="340" height="7" rx="4" fill="#159caa"/>
+    <circle cx="854" cy="313" r="20" fill="#e4f7f5"/>
+    <text x="854" y="319" text-anchor="middle" class="ink num">03</text>
+    <text x="844" y="363" class="ink cardtitle">Knowledge lookup</text>
+    <text x="844" y="394" class="muted small">Only the sources relevant to the question:</text>
+    <rect x="844" y="411" width="292" height="25" rx="8" fill="#effaf9"/>
+    <text x="857" y="428" class="ink small">SQLite · authorized order details</text>
+    <rect x="844" y="442" width="292" height="25" rx="8" fill="#f5f2ff"/>
+    <text x="857" y="459" class="ink small">Policy documents · store rules</text>
+    <rect x="844" y="473" width="292" height="25" rx="8" fill="#effaf9"/>
+    <text x="857" y="490" class="ink small">Customer history · only when needed</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1200" y="270" width="340" height="238" rx="20" fill="#fff" stroke="#dedcf2" stroke-width="1.5"/>
+    <rect x="1200" y="270" width="340" height="7" rx="4" fill="#6844db"/>
+    <circle cx="1234" cy="313" r="20" fill="#eee9ff"/>
+    <text x="1234" y="319" text-anchor="middle" class="ink num">04</text>
+    <text x="1224" y="363" class="ink cardtitle">Resolution agent</text>
+    <text x="1224" y="397" class="muted body">
+      <tspan x="1224" dy="0">Drafts a reply using verified order,</tspan>
+      <tspan x="1224" dy="24">policy, or saved-history evidence.</tspan>
+      <tspan x="1224" dy="34">It must not invent facts or promises.</tspan>
+    </text>
+  </g>
+
+  <!-- Top row arrows -->
+  <path d="M400 389H431" fill="none" stroke="#7664bd" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M780 389H811" fill="none" stroke="#7664bd" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1160 389H1191" fill="none" stroke="#7664bd" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Bottom row: continues right to left -->
+  <path d="M1370 508V623" fill="none" stroke="#7664bd" stroke-width="3" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="1200" y="640" width="340" height="238" rx="20" fill="#fff" stroke="#dedcf2" stroke-width="1.5"/>
+    <rect x="1200" y="640" width="340" height="7" rx="4" fill="#159caa"/>
+    <circle cx="1234" cy="683" r="20" fill="#e4f7f5"/>
+    <text x="1234" y="689" text-anchor="middle" class="ink num">05</text>
+    <rect x="1410" y="665" width="104" height="27" rx="13" fill="#f0eff7"/>
+    <text x="1462" y="683" text-anchor="middle" fill="#65647e" class="tiny" font-family="Inter,Segoe UI,Arial">OPTIONAL</text>
+    <text x="1224" y="733" class="ink cardtitle">DeepEval faithfulness</text>
+    <text x="1224" y="767" class="muted body">
+      <tspan x="1224" dy="0">For policy questions, compares the draft</tspan>
+      <tspan x="1224" dy="24">with retrieved policy evidence.</tspan>
+      <tspan x="1224" dy="34">Runs only when enabled and evidence exists.</tspan>
+    </text>
+    <text x="1224" y="850" fill="#65647e" class="small" font-family="Inter,Segoe UI,Arial">OFF by default · requires API configuration</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="820" y="640" width="340" height="238" rx="20" fill="#fff" stroke="#dedcf2" stroke-width="1.5"/>
+    <rect x="820" y="640" width="340" height="7" rx="4" fill="#6844db"/>
+    <circle cx="854" cy="683" r="20" fill="#eee9ff"/>
+    <text x="854" y="689" text-anchor="middle" class="ink num">06</text>
+    <text x="844" y="733" class="ink cardtitle">Final guardrails</text>
+    <text x="844" y="767" class="muted body">
+      <tspan x="844" dy="0">Checks privacy, evidence, and unsupported</tspan>
+      <tspan x="844" dy="24">refund or delivery promises before reply.</tspan>
+      <tspan x="844" dy="34">Unsafe or unverified drafts are not sent.</tspan>
+    </text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="440" y="640" width="340" height="238" rx="20" fill="#fff" stroke="#dedcf2" stroke-width="1.5"/>
+    <rect x="440" y="640" width="340" height="7" rx="4" fill="#d87543"/>
+    <circle cx="474" cy="683" r="20" fill="#fff0e8"/>
+    <text x="474" y="689" text-anchor="middle" class="ink num">07</text>
+    <text x="464" y="733" class="ink cardtitle">Human review routing</text>
+    <text x="464" y="767" class="muted body">
+      <tspan x="464" dy="0">Escalations, high-risk requests, and</tspan>
+      <tspan x="464" dy="24">refund requests of ₹500+ can be queued.</tspan>
+      <tspan x="464" dy="34">Routing is not the approval decision.</tspan>
+    </text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="640" width="340" height="238" rx="20" fill="#fff" stroke="#dedcf2" stroke-width="1.5"/>
+    <rect x="60" y="640" width="340" height="7" rx="4" fill="#159caa"/>
+    <circle cx="94" cy="683" r="20" fill="#e4f7f5"/>
+    <text x="94" y="689" text-anchor="middle" class="ink num">08</text>
+    <text x="84" y="733" class="ink cardtitle">Log and respond</text>
+    <text x="84" y="767" class="muted body">
+      <tspan x="84" dy="0">Save the ticket, answer, and processing</tspan>
+      <tspan x="84" dy="24">steps to the support record.</tspan>
+      <tspan x="84" dy="34">Return a safe reply and readable timeline.</tspan>
+    </text>
+  </g>
+
+  <!-- Bottom row arrows, right to left -->
+  <path d="M1200 759H1171" fill="none" stroke="#7664bd" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M820 759H791" fill="none" stroke="#7664bd" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M440 759H411" fill="none" stroke="#7664bd" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- GraphFlow correction loop -->
+  <path d="M990 878V982H28V238H1370V258" fill="none" stroke="#8b70df" stroke-width="2.5" stroke-dasharray="9 8" marker-end="url(#arrow)"/>
+  <rect x="74" y="947" width="616" height="34" rx="17" fill="#eee9ff"/>
+  <text x="92" y="970" fill="#5738c5" class="small" font-family="Inter,Segoe UI,Arial">GraphFlow only: correctable drafts retry up to 3 attempts</text>
+
+  <!-- Human decision lane -->
+  <path d="M610 878V1016H778V1024" fill="none" stroke="#159caa" stroke-width="2.5" marker-end="url(#arrowTeal)"/>
+  <rect x="60" y="1030" width="1480" height="204" rx="24" fill="#fff" stroke="#d7ecea" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="1030" width="12" height="204" rx="6" fill="#159caa"/>
+  <text x="96" y="1073" class="ink eyebrow">WHEN A PERSON NEEDS TO STEP IN</text>
+  <text x="96" y="1111" class="muted body">Staff signs into the protected review console, checks the request, and records a decision.</text>
+
+  <rect x="96" y="1143" width="248" height="61" rx="15" fill="#fff0e8"/>
+  <text x="220" y="1168" text-anchor="middle" fill="#63351e" class="cardtitle" font-family="Inter,Segoe UI,Arial">Pending review</text>
+  <text x="220" y="1190" text-anchor="middle" fill="#80563f" class="small" font-family="Inter,Segoe UI,Arial">Request waits in staff queue</text>
+
+  <path d="M344 1174H378V1134H524V1141" fill="none" stroke="#159caa" stroke-width="2" marker-end="url(#arrowTeal)"/>
+  <path d="M378 1174V1213H790V1206" fill="none" stroke="#159caa" stroke-width="2" marker-end="url(#arrowTeal)"/>
+  <rect x="408" y="1143" width="232" height="61" rx="15" fill="#e8f7f2"/>
+  <text x="524" y="1168" text-anchor="middle" fill="#17523f" class="cardtitle" font-family="Inter,Segoe UI,Arial">Approve</text>
+  <text x="524" y="1190" text-anchor="middle" fill="#426d5d" class="small" font-family="Inter,Segoe UI,Arial">Record reviewer + note</text>
+
+  <rect x="674" y="1143" width="232" height="61" rx="15" fill="#f0eff7"/>
+  <text x="790" y="1168" text-anchor="middle" fill="#39314f" class="cardtitle" font-family="Inter,Segoe UI,Arial">Reject</text>
+  <text x="790" y="1190" text-anchor="middle" fill="#65647e" class="small" font-family="Inter,Segoe UI,Arial">Record reviewer + note</text>
+
+  <path d="M640 1174V1127H1222V1141" fill="none" stroke="#159caa" stroke-width="2" marker-end="url(#arrowTeal)"/>
+  <path d="M906 1174H920V1219H1222V1206" fill="none" stroke="#159caa" stroke-width="2" marker-end="url(#arrowTeal)"/>
+  <rect x="948" y="1143" width="548" height="61" rx="15" fill="#f5f2ff"/>
+  <text x="972" y="1167" class="ink cardtitle">Decision is audited — not executed</text>
+  <text x="972" y="1190" class="muted small">No automatic refund, order change, or customer notification.</text>
+
+  <text x="60" y="1280" class="muted eyebrow">THE KNOWLEDGE SOURCES DEPEND ON MODE</text>
+  <rect x="60" y="1301" width="710" height="126" rx="20" fill="#fff" stroke="#dedcf2" stroke-width="1.5"/>
+  <rect x="60" y="1301" width="710" height="6" rx="3" fill="#8b7ab9"/>
+  <text x="88" y="1340" class="ink cardtitle">Demo mode · local and deterministic</text>
+  <text x="88" y="1372" class="muted body">Rule-based query/response · SQLite order and ticket checks · keyword policy search.</text>
+  <text x="88" y="1400" class="muted small">Does not use AutoGen, FAISS, or Chroma. DeepEval can run if explicitly enabled.</text>
+
+  <rect x="830" y="1301" width="710" height="126" rx="20" fill="#fff" stroke="#d7ecea" stroke-width="1.5"/>
+  <rect x="830" y="1301" width="710" height="6" rx="3" fill="#159caa"/>
+  <text x="858" y="1340" class="ink cardtitle">GraphFlow mode · agent-based</text>
+  <text x="858" y="1372" class="muted body">AutoGen agents · FAISS/BM25 policy retrieval · customer-scoped Chroma memory.</text>
+  <text x="858" y="1400" class="muted small">Grounding retries are capped at 3. Both modes keep order checks customer-scoped.</text>
+
+  <text x="60" y="1460" class="muted small">ShopEase Support AI · DeepEval is optional and runs only for policy questions with evidence when enabled.</text>
+</svg>

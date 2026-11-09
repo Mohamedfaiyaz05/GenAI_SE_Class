@@ -1,0 +1,16 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+
+# Local data and generated indexes
+data/chroma/
+data/faiss/
+data/cache/
+logs/*.log
+
+# Virtual environments
+buildvenv/
+.venv/
+venv/

@@ -1,0 +1,82 @@
+---
+title: ShopEase Support AI - Request and Human Review Flow
+---
+flowchart TD
+    CUSTOMER(["Customer asks a question"])
+    API["Support API<br/>Verify demo session and customer identity"]
+    QUERY["1. Query analysis<br/>Classify topic, find order ID,<br/>urgency, and sentiment"]
+    INPUT{"2. Input guardrails<br/>Is the request allowed?"}
+    BLOCK["Stop private lookups<br/>Return safe response"]
+    KNOW["3. Knowledge lookup<br/>Use only the sources needed"]
+    ORDER[("SQLite<br/>Order lookup scoped<br/>to signed-in customer")]
+    POLICY[("Policy search<br/>Demo: local keyword search<br/>GraphFlow: FAISS + BM25")]
+    MEMORY[("Support history<br/>Demo: customer SQLite tickets<br/>GraphFlow: customer-scoped Chroma")]
+    RESOLVE["4. Resolution<br/>Draft a reply from verified evidence"]
+    DEEPEVAL{"5. DeepEval enabled and configured,<br/>policy question, and evidence found?"}
+    METRIC["DeepEval FaithfulnessMetric<br/>Compare answer with policy evidence"]
+    SKIP["Skip optional evaluation"]
+    FINAL{"6. Final guardrails<br/>Is the answer safe and grounded?"}
+    RETRY{"GraphFlow only:<br/>correctable and attempts remain?"}
+    ESCALATE["Use safe response<br/>Mark for human follow-up"]
+    ROUTE{"7. Human review routing<br/>Escalation, high risk, or refund ≥ ₹500?"}
+    QUEUE[["Pending staff review queue"]]
+    CUSTOMER_PENDING["Customer sees safe pending response"]
+    NO_REVIEW["No human follow-up needed"]
+    LOG["8. Log Agent (GraphFlow)<br/>Review outcome and recommend follow-up"]
+    SAVE[("Save ticket, stages, and review status<br/>to SQLite audit records")]
+    DECISION{"Staff decision"}
+    APPROVE["Record Approved<br/>and reviewer note"]
+    REJECT["Record Rejected<br/>and reviewer note"]
+    AUDIT[("Append decision to<br/>human-review audit history")]
+    BOUNDARY["Approval records a staff decision only.<br/>It does not issue refunds, change orders,<br/>or notify customers."]
+    RESPONSE(["Return the grounded response<br/>and customer-readable timeline"])
+
+    CUSTOMER --> API --> QUERY --> INPUT
+    INPUT -- No --> BLOCK --> ROUTE
+    INPUT -- Yes --> KNOW
+    KNOW --> ORDER
+    KNOW --> POLICY
+    KNOW --> MEMORY
+    ORDER --> RESOLVE
+    POLICY --> RESOLVE
+    MEMORY --> RESOLVE
+    RESOLVE --> DEEPEVAL
+    DEEPEVAL -- Yes --> METRIC --> FINAL
+    DEEPEVAL -- No --> SKIP --> FINAL
+    FINAL -- Yes --> ROUTE
+    FINAL -- No --> RETRY
+    RETRY -- Yes --> RESOLVE
+    RETRY -- No --> ESCALATE --> ROUTE
+    ROUTE -- Yes --> QUEUE
+    QUEUE --> CUSTOMER_PENDING
+    QUEUE --> DECISION
+    DECISION -- Approve --> APPROVE --> AUDIT
+    DECISION -- Reject --> REJECT --> AUDIT
+    AUDIT --> BOUNDARY
+    ROUTE -- No --> NO_REVIEW
+    CUSTOMER_PENDING --> LOG
+    NO_REVIEW --> LOG
+    LOG --> SAVE
+    BLOCK --> LOG
+    SAVE --> RESPONSE
+
+    classDef actor fill:#eee9ff,stroke:#6844db,color:#20233f,stroke-width:2px;
+    classDef agent fill:#ffffff,stroke:#6844db,color:#20233f,stroke-width:2px;
+    classDef check fill:#fff8e6,stroke:#d69b24,color:#493b18,stroke-width:2px;
+    classDef data fill:#e7f8f6,stroke:#159caa,color:#123f47,stroke-width:2px;
+    classDef human fill:#fff0e8,stroke:#d87543,color:#63351e,stroke-width:2px;
+    classDef safe fill:#f4f1fb,stroke:#8b7ab9,color:#39314f,stroke-width:2px;
+    class CUSTOMER,RESPONSE actor;
+    class API,QUERY,KNOW,RESOLVE,LOG agent;
+    class INPUT,DEEPEVAL,FINAL,RETRY,ROUTE,DECISION check;
+    class ORDER,POLICY,MEMORY,SAVE,AUDIT data;
+    class QUEUE,APPROVE,REJECT human;
+    class BLOCK,SKIP,ESCALATE,CUSTOMER_PENDING,NO_REVIEW,BOUNDARY safe;
+
+    subgraph Modes["What changes by support mode"]
+        DEMO["Demo mode<br/>Rule-based query and response<br/>Local policy/history search<br/>No AutoGen, FAISS, or Chroma"]
+        GRAPH["GraphFlow mode<br/>AutoGen agents<br/>FAISS + BM25 policy retrieval<br/>Customer-scoped Chroma memory<br/>Up to 3 answer attempts"]
+    end
+
+    KNOW -. mode detail .-> DEMO
+    KNOW -. mode detail .-> GRAPH

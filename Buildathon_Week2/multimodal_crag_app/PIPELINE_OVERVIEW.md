@@ -36,6 +36,10 @@ The local index contains **553 chunks** from `agri_schemes_2026_27.pdf` and `bud
 - Answers follow the language of the question; Tamil-script questions receive Tamil responses, while citations and source names remain intact.
 - Each assistant answer has compact like/dislike controls. Ratings are saved in `feedback/` by response ID; the stored record contains the rating and timestamp, not the question, answer, or session ID. A user can change their rating.
 
+## Scraping Tamil Nadu scheme pages
+
+Run `python .\scripts\scrape_tn_agriculture_schemes.py` from the project root to follow the scheme-detail links on the Agriculture - Farmers Welfare listing. It saves JSON and Markdown archives plus `scraped_output/tn_agriculture_schemes.pdf`, which can be uploaded and indexed using the existing PDF workflow. Requests are restricted to `www.tn.gov.in` and spaced by 0.75 seconds by default. The listing currently contains some titles that appear unrelated to agriculture; all linked child pages are preserved, so review the output before adding it to the bot's knowledge base.
+
 ## Limitations to know
 
 - Vision extraction is triggered by embedded PDF images of at least 5 KB. A scanned page with no detectable embedded image, or a low-quality image, may still need dedicated OCR or manual review.

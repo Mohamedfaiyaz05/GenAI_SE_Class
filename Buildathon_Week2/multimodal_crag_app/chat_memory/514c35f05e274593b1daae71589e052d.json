@@ -1,0 +1,50 @@
+[
+  {
+    "role": "user",
+    "content": "What is the total food grain production target set for Tamil Nadu for 2026–27?"
+  },
+  {
+    "role": "assistant",
+    "content": "The total food grain production target set for Tamil Nadu for 2026–27 is 125 lakh metric tonnes [agri_schemes_2026_27.pdf, p. 20]."
+  },
+  {
+    "role": "user",
+    "content": "kuruvai package"
+  },
+  {
+    "role": "assistant",
+    "content": "Kuruvai package is an initiative announced by the Government of Tamil Nadu to support farmers, particularly in delta and non-delta districts, in response to inadequate water storage in the Mettur Dam. The package has an outlay of Rs.134.83 crore and has benefitted 4.03 lakh farmers so far. It aims to facilitate Kuruvai cultivation, which has been undertaken in an area of 8.26 lakh acres [budget_doc.pdf, p. 8]."
+  },
+  {
+    "role": "user",
+    "content": "Who are all eligible for Nammazhvar Award"
+  },
+  {
+    "role": "assistant",
+    "content": "The Nammazhvar Award is awarded to farmers who practice organic farming effectively. In 2026–27, five farmers will be recognized for their excellence in organic farming practices and will receive a cash prize of Rs. 2 lakh each along with a certificate of appreciation [agri_schemes_2026_27.pdf, p. 76]."
+  },
+  {
+    "role": "user",
+    "content": "பி.எம். கிசான் (PM-KISAN) திட்டத்தின் கீழ் தகுதியுள்ள விவசாயிகளுக்கு ஆண்டிற்கு எவ்வளவு நிதி உதவி வழங்கப்படுகிறது?"
+  },
+  {
+    "role": "assistant",
+    "content": "பி.எம். கிசான் (PM-KISAN) திட்டத்தின் கீழ் தகுதியுள்ள விவசாயிகளுக்கு ஆண்டிற்கு ரூ.6,000 நிதி உதவி வழங்கப்படுகிறது. இந்த உதவி மூன்று சமமான கட்டணங்களில் நேரடி நன்மை பரிமாற்றம் (DBT) மூலம் வழங்கப்படுகிறது [agri_schemes_2026_27.pdf, p. 78]."
+  },
+  {
+    "role": "user",
+    "content": "What services are provided to farmers through the Uzhavar Artificial Intelligence (AI) Scheme?"
+  },
+  {
+    "role": "assistant",
+    "content": "The Uzhavar Artificial Intelligence (AI) Scheme provides farmers with access to various agricultural services, including:\n\n1. Technical advisories related to weather forecasts, soil health, pest and disease management, and crop recommendations suited to prevailing agro-climatic conditions.\n2. Market intelligence and information on government schemes.\n3. AI-based pest and disease diagnosis.\n4. Weather forecasts and scheme benefits.\n\nThese services are accessible through mobile phones, enabling farmers to receive timely information throughout the crop cycle from sowing to harvest [budget_doc.pdf, p. 19; agri_schemes_2026_27.pdf, p. 29]."
+  },
+  {
+    "role": "user",
+    "content": "who is chief minister of tamilnadu and agriculture minister of tamil nadu"
+  },
+  {
+    "role": "assistant",
+    "content": "The Chief Minister of Tamil Nadu is Thiru. C. Joseph Vijay, and the Agriculture Minister is Thiru R. Vinoth [agri_schemes_2026_27.pdf, p. 303]."
+  }
+]

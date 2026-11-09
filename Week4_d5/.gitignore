@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+medenv/
+storage/faiss_index/
+storage/fallback_audit.csv
